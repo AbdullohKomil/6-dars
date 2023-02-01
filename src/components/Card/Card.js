@@ -49,7 +49,7 @@ export const Card = ({ obj }) => {
         <p className='card-text m-0 fs-5'>Last Location</p>
         <p className='card-text m-0 fs-6'>{location.name}</p>
         <Link
-          to='/'
+          to={'/Singlecharacter/' + obj.id}
           className='btn btn-primary'
         >
           More

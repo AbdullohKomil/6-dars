@@ -18,6 +18,7 @@ export const Filter = ({ setStatus, setGender, setSpecies }) => {
     <div>
       <h3 className='text-center'>Filter</h3>
       <p
+        onClick={()=> window.location.reload()}
         className='text-primary text-decoration-underline'
         style={{ cursor: 'pointer' }}
       >

@@ -5,6 +5,7 @@ import 'bootstrap/dist/js/bootstrap';
 import { Location } from './pages/Location/Location';
 import { Episode } from './pages/Episode/Episode';
 import { Character } from './pages/Character/Character';
+import { SingleCharacter } from './pages/SingleCharacter/SingleCharacter';
 
 export const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ export const router = createBrowserRouter([
       {
         path: 'Episode',
         element: <Episode />,
+      },
+      {
+        path: '/Singlecharacter/:id',
+        element: <SingleCharacter />,
       },
     ],
   },
