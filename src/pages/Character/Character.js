@@ -10,9 +10,10 @@ export const Character = () => {
   const [status, setStatus] = useState('');
   const [gender, setGender] = useState('');
   const { info, results } = data;
+  const [species, setSpecies] = useState('');
   const [search, setSearch] = useState('');
 
-  let api = `https://rickandmortyapi.com/api/character?page=${activePage}&name=${search}&status=${status}&gender=${gender}`;
+  let api = `https://rickandmortyapi.com/api/character?page=${activePage}&name=${search}&status=${status}&gender=${gender}&species=${species} `;
   useEffect(() => {
     (async () => {
       const data = await fetch(api).then((res) => res.json());
@@ -32,6 +33,7 @@ export const Character = () => {
           <Filter
             setGender={setGender}
             setStatus={setStatus}
+            setSpecies={setSpecies}
           />
         </div>
         <div className='col-9'>

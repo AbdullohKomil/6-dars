@@ -1,9 +1,19 @@
 import React from 'react';
 import { FilterBtn } from '../FilterBTN/FilterBtn';
 
-export const Filter = ({ setStatus, setGender }) => {
+export const Filter = ({ setStatus, setGender, setSpecies }) => {
   const statusData = ['alive', 'dead', 'unknown'];
   const genderData = ['male', 'female', 'unknown', 'genderless'];
+  const speciesData = [
+    'human',
+    'alien',
+    'humanoid',
+    'poopybutthole',
+    'unknown',
+    'animal',
+    'robot',
+    'cronenberg',
+  ];
   return (
     <div>
       <h3 className='text-center'>Filter</h3>
@@ -74,7 +84,17 @@ export const Filter = ({ setStatus, setGender }) => {
             aria-labelledby='headingTwo'
             data-bs-parent='#accordionExample'
           >
-            <div className='accordion-body'></div>
+            <div className='accordion-body'>
+              {speciesData.map((item, index) => (
+                <FilterBtn
+                  setState={setSpecies}
+                  key={index}
+                  text={item}
+                  index={index}
+                  name='species'
+                />
+              ))}
+            </div>
           </div>
         </div>
         <div className='accordion-item'>
